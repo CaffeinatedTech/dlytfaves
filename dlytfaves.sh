@@ -4,14 +4,23 @@
 # You may add more channels by simply copying one below and changing the label, the save to path and the
 # channel ID at the end of the line
 
+# The path to download your videos to.  Each channel will also get their own directory in here.
+DOWNLOAD_PATH=/mnt/Data/youtube
+
 # Red Right Hand
-youtube-dl --download-archive ~/.mydownloads -i -o '/mnt/Data/youtube/Red_Right_Hand/%(title)s.%(ext)s' --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' https://www.youtube.com/channel/UCDZAQuvfWcSSP9i5gMx7E0g
+CHAN_ID=UCDZAQuvfWcSSP9i5gMx7E0g
+CHAN_DIR=Red_Right_Hand
+youtube-dl --download-archive ~/.mydownloads -i -o "$DOWNLOAD_PATH/$CHAN_DIR/%(title)s.%(ext)s" --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' https://www.youtube.com/channel/$CHAN_ID
 
 # H3 Podcast
-youtube-dl --download-archive ~/.mydownloads -i -o '/mnt/Data/youtube/H3_Podcast/%(title)s.%(ext)s' --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' https://www.youtube.com/channel/UCLtREJY21xRfCuEKvdki1Kw
+CHAN_ID=UCLtREJY21xRfCuEKvdki1Kw
+CHAN_DIR=H3_Podcast
+youtube-dl --download-archive ~/.mydownloads -i -o "$DOWNLOAD_PATH/$CHAN_DIR/%(title)s.%(ext)s" --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' https://www.youtube.com/channel/$CHAN_ID
 
 # BitHead1000
-youtube-dl --download-archive ~/.mydownloads -i -o '/mnt/Data/youtube/BitHead1000/%(title)s.%(ext)s' --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' --dateafter now-1months https://www.youtube.com/channel/UCTiICpPNhXz5IKpYYMIwm8Q
+CHAN_ID=UCTiICpPNhXz5IKpYYMIwm8Q
+CHAN_DIR=BitHead1000
+youtube-dl --download-archive ~/.mydownloads -i -o "$DOWNLOAD_PATH/$CHAN_DIR/%(title)s.%(ext)s" --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' --dateafter now-1months https://www.youtube.com/channel/$CHAN_ID
 
 # The Backyard Scientist
 youtube-dl --download-archive ~/.mydownloads -i -o '/mnt/Data/youtube/Backyard_Scientist/%(title)s.%(ext)s' --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' --dateafter now-1months https://www.youtube.com/channel/UC06E4Y_-ybJgBUMtXx8uNNw
