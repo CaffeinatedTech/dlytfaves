@@ -60,3 +60,6 @@ youtube-dl --download-archive ~/.mydownloads -i -o '/mnt/Data/youtube/The_Coding
 
 # Thomas DeLauer
 youtube-dl --download-archive ~/.mydownloads -i -o '/mnt/Data/youtube/Thomas_DeLauer/%(title)s.%(ext)s' --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' --dateafter now-1months https://www.youtube.com/channel/UC70SrI3VkT1MXALRtf0pcHg
+
+# ElectroBOOM
+youtube-dl --download-archive ~/.mydownloads -i -o '/mnt/Data/youtube/ElectroBoom/%(title)s.%(ext)s' --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' --dateafter now-1months https://www.youtube.com/channel/UCJ0-OtVpF0wOKEqT2Z1HEtA
