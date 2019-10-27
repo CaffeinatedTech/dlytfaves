@@ -1,6 +1,8 @@
 #!/bin/bash
 # by CaffeinatedTech
 # Download last 30 videos in the last month of youtube channels, but remember already downloaded videos.
+# You may add more channels by simply copying one below and changing the label, the save to path and the
+# channel ID at the end of the line
 
 # Red Right Hand
 youtube-dl --download-archive ~/.mydownloads -i -o '/mnt/Data/youtube/Red_Right_Hand/%(title)s.%(ext)s' --no-mtime --playlist-end 30 -f 'bestvideo[height<=1080]+bestaudio/best[height<=1080]' https://www.youtube.com/channel/UCDZAQuvfWcSSP9i5gMx7E0g
